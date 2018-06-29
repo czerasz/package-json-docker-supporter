@@ -26,14 +26,14 @@ const packageJSON = require(packageJSONPath)
 const packageLockJSON = require(packageLockJSONPath)
 
 const newPackageJSON = {
-  name: 'irrelevant',
-  version: 'irrelevant',
+  name: packageJSON.name,
+  version: '0.1.0-irrelevant',
+  description: 'irrelevant',
   dependencies: packageJSON.dependencies,
   devDependencies: packageJSON.devDependencies
 }
 const newPackageLockJSON = Object.assign(packageLockJSON, {
-  name: 'irrelevant',
-  version: 'irrelevant',
+  version: '0.1.0-irrelevant',
 })
 
 fs.writeFileSync(packageJSONPath, JSON.stringify(newPackageJSON))
