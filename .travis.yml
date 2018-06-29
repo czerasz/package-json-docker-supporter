@@ -5,3 +5,14 @@ node_js:
   - "8"
 script: npm run build
 
+deploy:
+  provider: releases
+  api_key:
+    secure: "GITHUB OAUTH TOKEN"
+  file:
+    - dist/pjds-linux
+    - dist/pjds-macos
+    - dist/pjds-win.exe
+  skip_cleanup: true
+  on:
+    tags: true
