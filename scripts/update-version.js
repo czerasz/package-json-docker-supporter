@@ -2,7 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const version = require('../package.json').version
+const version = process.env.TRAVIS_TAG || 'local'
 
 const content = fs.readFileSync(path.join(__dirname, '..', 'index.js'))
 

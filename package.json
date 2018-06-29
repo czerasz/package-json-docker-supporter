@@ -1,6 +1,6 @@
 {
   "name": "package-json-docker-supporter",
-  "version": "0.1.0",
+  "version": "0.1.0-version-handled-by-ci",
   "description": "",
   "main": "index.js",
   "scripts": {
