@@ -8,7 +8,7 @@ script: npm run build
 deploy:
   provider: releases
   api_key:
-    secure: "GITHUB OAUTH TOKEN"
+    secure: $GITHUB_API_TOKEN
   file:
     - dist/pjds-linux
     - dist/pjds-macos
